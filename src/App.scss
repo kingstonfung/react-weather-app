@@ -1,27 +1,4 @@
-$spacing-sm:    5px;
-$spacing:       10px;
-$spacing-lg:    20px;
-
-$font-family:   'Source Sans Pro', sans-serif;
-
-$font-weight-l: 300;
-$font-weight-n: 400;
-$font-weight-s: 600;
-$font-weight-b: 700;
-
-* {
-  &,&::before,&::after {box-sizing:border-box}
-  user-select: none;
-}
-
-body {
-  font-family: $font-family;
-  font-weight: $font-weight-n;
-  background-color: #37474F;
-}
-
 .card {
-  // display: none;
   width: 300px;
   height: 450px;
   margin: 1em auto 0;
