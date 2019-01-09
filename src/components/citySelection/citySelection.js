@@ -1,3 +1,11 @@
+/*
+This is a 'functional component' that renders a dropdown selection box. The event handler (onChange)
+is passed in as part of the props, so it does not need to care about handling the user input other
+than executing a function provided its parent component.
+
+It will also associate the rendering with the stylesheet imported below.
+*/
+
 import React from 'react';
 
 import './citySelection.scss';

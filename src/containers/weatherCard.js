@@ -1,3 +1,13 @@
+/*
+This is a standard React component responbile for holding the top & bottom portion of the weather
+card. It also relays the click event on the card top, to toggle the active/inactive state which
+in return show or hide the forecast (bottom) weather card.
+
+Arguably this component may not be needed if we distribute its parts to the parent and children
+components. This approach can be viewed as optional, but I usually prefer better separations
+to achieve better code organizations.
+*/
+
 import React from 'react';
 
 import WeatherCardTop from './weatherCardTop';

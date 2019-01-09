@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherCard component... should match snapshot 1`] = `
+<div>
+  <div
+    class="card "
+  >
+    <div
+      class="cardUpperPortion"
+      style="background-image: url(http://example.com/image.jpg);"
+    >
+      <div
+        class="cardInfo"
+      >
+        <div
+          class="cardTemperature"
+        >
+          30
+        </div>
+        <div
+          class="currentCondition"
+        >
+          clear
+        </div>
+      </div>
+      <h2
+        class="cityNameTitle"
+      >
+        somewhere
+      </h2>
+    </div>
+    <div
+      class="cardBottomPortion"
+    >
+      <div
+        class="cardDetail"
+      >
+        <ul
+          class="forecastsWrapper"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
