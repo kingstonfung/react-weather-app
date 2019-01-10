@@ -1,3 +1,12 @@
+/*
+This is a 'function component' that renders the top face of the weather card. It will get information
+from the <App> component, and distribute it among other smaller components.
+
+It is often called a "container" because it contains many smaller components and have very little
+work to do on its own. Although this is an informal name, but it often help developers to distinguish
+the purpose between a 'component' vs a 'container'.
+*/
+
 import React from 'react';
 
 import CardTitle from '../components/cityNameTitle/cityNameTitle';
