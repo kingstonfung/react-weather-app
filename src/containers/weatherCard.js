@@ -10,8 +10,13 @@ to achieve better code organizations.
 
 import React from 'react';
 
-import WeatherCardTop from './weatherCardTop';
-import WeatherCardBottom from './weatherCardBottom';
+import CardTitle from '../components/cityNameTitle/cityNameTitle';
+import CardDescription from '../components/currentCondition/currentCondition';
+import CardTemperature from '../components/temperature/temperature';
+
+import generateForecasts from './helpers/generateForecast';
+
+import './weatherCard.scss';
 
 class WeatherCard extends React.Component {
   state = {
@@ -32,18 +37,29 @@ class WeatherCard extends React.Component {
     return classNames;
   }
 
-  render() {
+  render(props) {
     return (
       <div className={this.getCardClassNames()} onClick={this.onCardClick.bind(this)}>
-        <WeatherCardTop
-          temperature={this.props.temperature}
-          currentCondition={this.props.currentCondition}
-          city={this.props.city}
-          cityImage={this.props.cityImage}>
-        </WeatherCardTop>
-        <WeatherCardBottom
-          forecast={this.props.forecast}>
-        </WeatherCardBottom>
+        <div className='cardUpperPortion' style={{"backgroundImage": `url(${this.props.cityImage})`}}>
+          <div className='cardInfo'>
+            <CardTemperature>
+              {this.props.temperature}
+            </CardTemperature>
+            <CardDescription>
+              {this.props.currentCondition}
+            </CardDescription>
+          </div>
+          <CardTitle>
+            {this.props.city}
+          </CardTitle>
+        </div>
+        <div className='cardBottomPortion'>
+          <div className='cardDetail'>
+            <ul className='forecastsWrapper'>
+              {generateForecasts(this.props.forecast)}
+            </ul>
+          </div>
+        </div>
       </div>
     )
   }

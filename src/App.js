@@ -45,6 +45,7 @@ class App extends Component {
 
   changeDisplayCity(city) {
     getWeatherByCity(city).then((response) => {
+      console.log(response)
       this.setState({
         city: response.data.name,
         temperature: Math.round(response.data.main.temp),
