@@ -41,6 +41,9 @@ class WeatherCard extends React.Component {
     return (
       <div className={this.getCardClassNames()} onClick={this.onCardClick.bind(this)}>
         <div className='cardUpperPortion' style={{"backgroundImage": `url(${this.props.cityImage})`}}>
+          <CardTitle>
+            {this.props.city}
+          </CardTitle>
           <div className='cardInfo'>
             <CardTemperature>
               {this.props.temperature}
@@ -49,9 +52,6 @@ class WeatherCard extends React.Component {
               {this.props.currentCondition}
             </CardDescription>
           </div>
-          <CardTitle>
-            {this.props.city}
-          </CardTitle>
         </div>
         <div className='cardBottomPortion'>
           <div className='cardDetail'>

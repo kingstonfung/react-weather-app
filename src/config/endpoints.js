@@ -11,6 +11,6 @@ This static endpoint is defaulted to "edmonton", with 4 other possible query inp
 "vancouver", "montreal", "calgary", and "toronto".
 */
 
-export const CITY_WEATHER_URL = 'https://sjtz41wo3m.execute-api.us-east-1.amazonaws.com/weather/?city=';
+export const CITY_WEATHER_URL = 'https://api.openweathermap.org/data/2.5/weather?q=$$$$$,ca&appid=abb695648274743abff28bd89d04ed01&units=metric';
 
-export const CITY_FORECAST_URL = 'https://9q8kp49olb.execute-api.us-east-1.amazonaws.com/forecast/?city=';
+export const CITY_FORECAST_URL = 'https://api.openweathermap.org/data/2.5/forecast/daily?q=$$$$$,ca&appid=abb695648274743abff28bd89d04ed01&units=metric&cnt=5';
